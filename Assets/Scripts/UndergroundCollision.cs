@@ -10,6 +10,16 @@ public class UndergroundCollision : MonoBehaviour
         {
             string tag = other.tag;
 
+            if (tag.Equals("NEWGAME"))
+            {
+                Level.Instance.LoadNextLevel();
+            }
+
+            if (tag.Equals("QUIT"))
+            {
+                Level.Instance.QuitGame();
+            }
+
             if (tag.Equals("Object"))
             {
                 Level.Instance.objectsInScene--;

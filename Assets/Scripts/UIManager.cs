@@ -25,6 +25,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] public TMP_Text nextLevelText;
     [SerializeField] public TMP_Text currentLevelText;
     [SerializeField] public Image progressFillImage;
+    [SerializeField] public GameObject levelProgress;
 
     [Space]
     [SerializeField] public TMP_Text levelCompletedText;

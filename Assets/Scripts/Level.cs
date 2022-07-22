@@ -74,6 +74,15 @@ public class Level : MonoBehaviour
     public void LoadNextLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        if (UIManager.Instance.levelProgress.activeSelf == false)
+        {
+            UIManager.Instance.levelProgress.SetActive(true);
+        }
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 
     public void RestartLevel()

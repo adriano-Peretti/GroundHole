@@ -46,7 +46,10 @@ public class Magnet : MonoBehaviour
     {
         string tag = other.tag;
 
-        if (!Game.isGameover && (tag.Equals("Obstacle") || tag.Equals("Object")))
+        if (!Game.isGameover && (tag.Equals("Obstacle")
+            || tag.Equals("Object")
+            || tag.Equals("NEWGAME")
+            || tag.Equals("QUIT")))
         {
             AddToMagnetField(other.attachedRigidbody);
         }
@@ -56,7 +59,10 @@ public class Magnet : MonoBehaviour
     {
         string tag = other.tag;
 
-        if (!Game.isGameover && (tag.Equals("Obstacle") || tag.Equals("Object")))
+        if (!Game.isGameover && (tag.Equals("Obstacle")
+            || tag.Equals("Object")
+            || tag.Equals("NEWGAME")
+            || tag.Equals("QUIT")))
         {
             RemoveFromMagnetField(other.attachedRigidbody);
         }

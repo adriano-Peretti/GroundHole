@@ -152,10 +152,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 849a517ebdc4fe84b8df58bfa0473a5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneOffset: 1
+  sceneOffset: 0
   nextLevelText: {fileID: 359707733}
   currentLevelText: {fileID: 1024046147}
   progressFillImage: {fileID: 1365984852}
+  levelProgress: {fileID: 791809073}
   levelCompletedText: {fileID: 1665031778}
   fadePanel: {fileID: 312093190}
 --- !u!4 &16560197

@@ -13,6 +13,7 @@ public class UndergroundCollision : MonoBehaviour
             if (tag.Equals("NEWGAME"))
             {
                 Level.Instance.LoadNextLevel();
+                AudioManager.audioManagerInstance.RightCubeEffect();
             }
 
             if (tag.Equals("QUIT"))
@@ -26,6 +27,7 @@ public class UndergroundCollision : MonoBehaviour
                 UIManager.Instance.UpdateLevelProgress();
 
                 Magnet.Instance.RemoveFromMagnetField(other.attachedRigidbody);
+                AudioManager.audioManagerInstance.RightCubeEffect();
 
                 Destroy(other.gameObject);
 
@@ -40,6 +42,8 @@ public class UndergroundCollision : MonoBehaviour
             }
             if (tag.Equals("Obstacle"))
             {
+                AudioManager.audioManagerInstance.WrongCubeEffect();
+
                 Game.isGameover = true;
                 Camera.main.transform
                     .DOShakePosition(1f, 2f, 20, 90)
